@@ -4,14 +4,21 @@ import services from "./Images/services.jpg";
 
 import Service from "./components/Services/Services";
 import Form from "./components/Form/Form";
+import useStyles from "./styles";
 const App = () => {
+  const classes = useStyles();
   return (
     <Container maxwidth="lg">
-      <AppBar position="static" color="inherit">
-        <Typography variant="h2" align="center">
+      <AppBar className={classes.appBar} position="static" color="inherit">
+        <Typography className={classes.heading} variant="h2" align="center">
           Services
         </Typography>
-        <img src={services} alt="services" height="40"></img>
+        <img
+          className={classes.image}
+          src={services}
+          alt="services"
+          height="60"
+        ></img>
       </AppBar>
       <Grow in>
         <Container>
